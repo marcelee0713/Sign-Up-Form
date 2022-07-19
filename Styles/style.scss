@@ -13,6 +13,7 @@ body{
     display: flex;
     height: 100vh; 
     justify-content: center;
+    overflow: hidden;
     .header-container{
         display: flex;
         flex-direction: column;
