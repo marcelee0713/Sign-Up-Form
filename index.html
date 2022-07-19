@@ -17,36 +17,42 @@
             </div>
             <div class="credits">Photo by <a href="https://www.pexels.com/@robin-381450/">Robin</a> on <a href="https://www.pexels.com/">Pexels</a></div>
         </header>
-        <div class="content-conatiner">
+        <div class="content-container">
             <div class="description">
                 <h2>Get our exclusive promo and vouchers right after you sign up!</h2>
                 <h2>Create your account now!</h2>
             </div>
             <div class="form-container">
-                <form action="" method="post">
+                <form action="" method="get">
                     <div class="input-containers">
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name" required>
+                        <input type="text" id="first_name" name="first_name" placeholder=" " required>
+                        <div id="first-name-error-msg" class="error-message"></div>
                     </div>
                     <div class="input-containers">
                         <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <input type="text" id="last_name" name="last_name" placeholder=" "  required>
+                        <div id="last-name-error-msg" class="error-message"></div>
                     </div>
                     <div class="input-containers">
                         <label for="email_address">EMAIL</label>
-                        <input type="email" id="email_address" name="email_address" required>
+                        <input type="email" id="email_address" name="email_address" placeholder=" " required>
+                        <div id="email-error-msg" class="error-message"></div>
                     </div>
                     <div class="input-containers">
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input type="tel" id="phone_number" name="phone_number" required>
+                        <input type="tel" maxlength="11" pattern="^(09|\+639)\d{9}$" title="Please use the PH Dial Code" id="phone_number" name="phone_number" placeholder="+63" required>
+                        <div id="phone-number-error-msg" class="error-message"></div>
                     </div>
                     <div class="input-containers">
                         <label for="user_password">PASSWORD</label>
-                        <input type="password" id="user_password" name="user_password" required>
+                        <input type="password" id="user_password" name="user_password" placeholder=" " required>
+                        <div id="password-error-msg" class="error-message"></div>
                     </div>
                     <div class="input-containers">
                         <label for="user_confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="user_confirm_password" name="user_confirm_password" required>
+                        <input type="password" id="user_confirm_password" name="user_confirm_password" placeholder=" "  required>
+                        <div id="confirm-password-error-msg" class="error-message"></div>
                     </div>
                     <button id="btn-submit" type="submit">Create Account</button>
                 </form>
