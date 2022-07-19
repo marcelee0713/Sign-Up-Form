@@ -12,7 +12,6 @@ body {
 }
 
 .main-content {
-  margin: 0 10rem;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -44,6 +43,7 @@ body {
 }
 .main-content .header-container .credits {
   text-align: center;
+  margin-bottom: 8px;
 }
 .main-content .header-container .credits a {
   color: inherit;
@@ -108,6 +108,7 @@ body {
   color: rgb(255, 7, 7);
 }
 .main-content .content-container .form-container form button {
+  font-size: 0.9rem;
   cursor: pointer;
   color: #ffffff;
   border-radius: 5px;
@@ -126,4 +127,92 @@ body {
 .main-content .content-container .login-container a {
   text-decoration: none;
   color: rgb(150, 72, 110);
+}
+
+@media screen and (max-width: 48em) {
+  .main-content .header-container {
+    padding: 5rem 0 0 0;
+  }
+  .main-content .header-container .header-text-handler .header-text {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    margin-right: -10px;
+  }
+  .main-content .header-container .credits {
+    font-size: 0.8rem;
+  }
+  .main-content .header-container .credits a {
+    color: inherit;
+  }
+  .main-content .content-container {
+    padding: 5rem 0 0 0;
+  }
+  .main-content .content-container .description {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+  .main-content .content-container .form-container {
+    margin: 1.5rem 0;
+    padding: 2rem 2rem 2rem 1rem;
+  }
+  .main-content .content-container .login-container {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 38.4375em) {
+  .main-content .header-container .header-text-handler .header-text {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    margin-right: -8px;
+  }
+  .main-content .header-container .credits {
+    font-size: 0.6rem;
+  }
+  .main-content .header-container .credits a {
+    color: inherit;
+  }
+  .main-content .content-container {
+    padding: 5rem 0 0 0;
+  }
+  .main-content .content-container .description {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+  }
+  .main-content .content-container .form-container {
+    margin: 1.5rem 0;
+    padding: 2rem 2rem 2rem 1rem;
+  }
+  .main-content .content-container .form-container form {
+    grid-gap: 0.2em;
+    grid-template-columns: 1fr;
+  }
+  .main-content .content-container .form-container form .input-containers {
+    gap: 6px;
+  }
+  .main-content .content-container .form-container form .input-containers label {
+    font-size: 0.8rem;
+  }
+  .main-content .content-container .form-container form .input-containers input {
+    height: 25px;
+  }
+  .main-content .content-container .form-container form .input-containers .error-message {
+    font-size: 0.75rem;
+    color: rgb(255, 7, 7);
+  }
+  .main-content .content-container .form-container form button {
+    font-size: 0.8rem;
+    width: 130px;
+    height: 35px;
+  }
+  .main-content .content-container .login-container {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 30em) {
+  .main-content .header-container .header-text-handler .header-text {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+  }
 }/*# sourceMappingURL=style.css.map */
