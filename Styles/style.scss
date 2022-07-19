@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1f1f1f;
+    font-family: 'Roboto', sans-serif;
+    min-height:100vh;
+}
+.main-content{
+    margin: 0 10rem;
+    display: flex;
+    height: 100vh; 
+    justify-content: center;
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10rem 0 0 0 ;
+        color:white;
+        background-image: url(../Images/pexels-robin-1020370.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        max-width: 600px;
+        .header-text-handler{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inconsolata', monospace;
+            background-color: rgba(150, 72, 110, 0.6);
+            width: 100%;
+            height: 100px;
+            .header-text{
+                letter-spacing: 15px;
+                margin-right: -15px;
+            }
+        }
+        .credits{
+            text-align: center;
+            a{
+                color:inherit;
+            }
+        }
+    }
+    .content-container{
+        background-color: #f2f2f2;
+        color:#1f1f1f;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 0 0 0 ;
+        .description{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding:0 1.2rem;
+        }
+        .form-container{
+            background-color: #ffffff;
+            margin: 2rem 0;
+            padding: 2.5rem 2.5rem 2.5rem 1.2rem;
+            box-shadow: 0px 6px 6px 0.5px rgb(0, 0, 0, 0.3);
+            form{
+                display: grid;
+                grid-gap: 2em 1.5em;
+                grid-template-columns: 1fr 1fr;
+                .input-containers{
+                    display: flex;
+                    gap: 8px;
+                    flex-direction: column;
+                    label{
+                        font-weight: bold;
+                    }
+                    input{
+                        font-family: 'Roboto', sans-serif;
+                        height: 35px;
+                        border-radius: 5px;
+                        border: 1px solid rgb(0, 0, 0, 0.3);
+                        padding: 0.5em;
+                        &:focus{
+                            outline: none;
+                            border: 2px solid rgba(150, 72, 110, 1);
+                        }
+                        &:valid{
+                            border: 2px solid rgb(68, 216, 68);
+                        }
+                        &:invalid:not(:focus):not(:placeholder-shown){
+                            border: 2px solid rgb(255, 7, 7);;
+                        }
+
+                    }
+                    .error-message{
+                        font-size: 0.85rem;
+                        color: rgb(255, 7, 7);
+                    }
+                }
+                button{
+                    cursor: pointer;
+                    color:#ffffff;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: rgba(150, 72, 110, 0.9);
+                    width: 180px;
+                    height: 40px;
+                    transition: 200ms ease-in-out;
+                    &:hover{
+                        background-color: rgba(150, 72, 110, 1);
+                    }
+                }
+            }
+        }
+        .login-container{
+            padding-left: 1.2rem;
+            a{
+                text-decoration: none;
+                color: rgba(150, 72, 110, 1);
+            }
+        }
+    }
+}
