@@ -121,6 +121,73 @@ body{
             }
         }
     }
+    .style-modal{
+        background-color: rgba(0, 0, 0, 0.6);
+        color:#f2f2f2;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow:auto;
+        z-index: 1;
+        display: none;
+        .modal-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #1f1f1f;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px 0px rgba(150, 72, 110, 0.5);
+            width: 400px;
+            height: 200px;
+            padding: 2rem;
+            gap:8px;
+            animation-name: modalopen;
+            animation-duration: 1.2s;
+            @keyframes modalopen {
+                from{opacity: 0;}
+                to{opacity: 1;}
+            }
+            .modal-header{
+                font-size: 2rem;
+                span{
+                    color:rgba(150, 72, 110, 1);
+                }
+            }
+            .modal-user-name{
+                font-size: 1.8rem;
+            }
+            .modal-buttons-container{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                margin-top: 8px;
+                .button-modal{
+                    font-size: 0.9rem;
+                    width: 130px;
+                    height:auto;
+                    font-weight:bold;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    background-color: rgba(150, 72, 110, 1);
+                    color:#f2f2f2;
+                    border: none;
+                    border-radius: 5px;
+                    transition: 250ms ease-in-out;
+                    &:hover{
+                        background-color: rgba(150, 72, 110, 0.7);
+                    }
+                    a{
+                        color:inherit;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 48em) {
     .main-content{
@@ -226,5 +293,29 @@ body{
                 }
             }
         }
+        .style-modal{
+            .modal-content{
+                width: 200px;
+                height: 100px;
+                padding: 0.3rem;
+                gap:8px;
+                .modal-header{
+                    font-size: 0.8rem;
+                }
+                .modal-user-name{
+                    font-size: 0.7rem;
+                }
+                .modal-buttons-container{
+                    margin-top: 0;
+                    .button-modal{
+                        font-size: 0.4rem;
+                        width: 70px;
+                    }
+                }
+            }
+        }
     }
+}
+@media screen and (max-width: 28.125em){
+
 }
